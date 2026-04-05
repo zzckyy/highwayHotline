@@ -428,7 +428,6 @@ GameObject:
   - component: {fileID: 617489033}
   - component: {fileID: 617489032}
   - component: {fileID: 617489031}
-  - component: {fileID: 617489030}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -456,51 +455,6 @@ RectTransform:
   m_AnchoredPosition: {x: -90, y: -114}
   m_SizeDelta: {x: 80, y: 226.3451}
   m_Pivot: {x: 0.49999997, y: 0.5}
---- !u!114 &617489030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 617489028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2063178501}
-          m_TargetAssemblyTypeName: carController, Assembly-CSharp
-          m_MethodName: MobileInputLeft
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2063178501}
-          m_TargetAssemblyTypeName: carController, Assembly-CSharp
-          m_MethodName: MobileInputIdle
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &617489031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,7 +498,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 617489032}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2063178505}
+        m_TargetAssemblyTypeName: carControlLane, Assembly-CSharp
+        m_MethodName: MoveLeft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &617489032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -677,7 +643,6 @@ GameObject:
   - component: {fileID: 812666659}
   - component: {fileID: 812666658}
   - component: {fileID: 812666657}
-  - component: {fileID: 812666656}
   m_Layer: 5
   m_Name: Button (Legacy) (1)
   m_TagString: Untagged
@@ -705,51 +670,6 @@ RectTransform:
   m_AnchoredPosition: {x: 89, y: -114}
   m_SizeDelta: {x: 80, y: 226.3451}
   m_Pivot: {x: 0.49999997, y: 0.5}
---- !u!114 &812666656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 812666654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2063178501}
-          m_TargetAssemblyTypeName: carController, Assembly-CSharp
-          m_MethodName: MobileInputRight
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2063178501}
-          m_TargetAssemblyTypeName: carController, Assembly-CSharp
-          m_MethodName: MobileInputIdle
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &812666657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -794,13 +714,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 2063178505}
+        m_TargetAssemblyTypeName: carControlLane, Assembly-CSharp
+        m_MethodName: MoveRight
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1175,6 +1095,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1788725313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1788725315}
+  - component: {fileID: 1788725314}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1788725314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788725313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71bcee6e3129fdfbfb5528f18db153ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carPrefab: {fileID: 2958678162068617756, guid: a9b8d97a02f674e8e8352f37b36eb5e2, type: 3}
+  spawnLocation: 8
+  spawnInterval: 2
+--- !u!4 &1788725315
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788725313}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.09813098, y: -1.8029125, z: -0.019403037}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1858043067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,6 +1226,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2011033281 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2958678162068617756, guid: a9b8d97a02f674e8e8352f37b36eb5e2, type: 3}
+  m_PrefabInstance: {fileID: 118243463477510443}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &2011033286
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011033281}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2063178500
 GameObject:
   m_ObjectHideFlags: 0
@@ -1269,8 +1268,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2063178503}
   - component: {fileID: 2063178502}
-  - component: {fileID: 2063178501}
   - component: {fileID: 2063178504}
+  - component: {fileID: 2063178505}
+  - component: {fileID: 2063178506}
   m_Layer: 0
   m_Name: carPlayer
   m_TagString: Player
@@ -1278,19 +1278,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2063178501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2063178500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5afb45f97610f98f5a926e09b41ca1f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
 --- !u!212 &2063178502
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1404,6 +1391,111 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.45, y: 0.97}
   m_EdgeRadius: 0
+--- !u!114 &2063178505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063178500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a93826040aedd639bbf8bedbc81f72b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  laneChangeSpeed: 10
+--- !u!50 &2063178506
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063178500}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!1001 &118243463477510443
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2958678162068617756, guid: a9b8d97a02f674e8e8352f37b36eb5e2, type: 3}
+      propertyPath: m_Name
+      value: taxiTraffic
+      objectReference: {fileID: 0}
+    - target: {fileID: 2958678162068617756, guid: a9b8d97a02f674e8e8352f37b36eb5e2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639407624304545595, guid: a9b8d97a02f674e8e8352f37b36eb5e2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.4759631
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639407624304545595, guid: a9b8d97a02f674e8e8352f37b36eb5e2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639407624304545595, guid: a9b8d97a02f674e8e8352f37b36eb5e2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639407624304545595, guid: a9b8d97a02f674e8e8352f37b36eb5e2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639407624304545595, guid: a9b8d97a02f674e8e8352f37b36eb5e2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639407624304545595, guid: a9b8d97a02f674e8e8352f37b36eb5e2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639407624304545595, guid: a9b8d97a02f674e8e8352f37b36eb5e2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639407624304545595, guid: a9b8d97a02f674e8e8352f37b36eb5e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639407624304545595, guid: a9b8d97a02f674e8e8352f37b36eb5e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639407624304545595, guid: a9b8d97a02f674e8e8352f37b36eb5e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2958678162068617756, guid: a9b8d97a02f674e8e8352f37b36eb5e2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2011033286}
+  m_SourcePrefab: {fileID: 100100000, guid: a9b8d97a02f674e8e8352f37b36eb5e2, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1414,3 +1506,5 @@ SceneRoots:
   - {fileID: 2063178503}
   - {fileID: 906297837}
   - {fileID: 1457233779}
+  - {fileID: 118243463477510443}
+  - {fileID: 1788725315}
