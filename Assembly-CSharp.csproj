@@ -60,14 +60,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="/home/zzckyy/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.2.1/Analyzers/Microsoft.Unity.Analyzers.dll" />
-    <Analyzer Include="/mnt/bca41a29-af54-4e6b-8da0-00428079a18b/Project Game/Highway Hotline/Library/PackageCache/com.unity.collab-proxy@2.12.4/Lib/Editor/Unity.Plastic.Newtonsoft.Json.dll" />
-    <Analyzer Include="/mnt/bca41a29-af54-4e6b-8da0-00428079a18b/Project Game/Highway Hotline/Library/PackageCache/com.unity.collab-proxy@2.12.4/Lib/Editor/log4netPlastic.dll" />
-    <Analyzer Include="/mnt/bca41a29-af54-4e6b-8da0-00428079a18b/Project Game/Highway Hotline/Library/PackageCache/com.unity.collab-proxy@2.12.4/Lib/Editor/Unity.Plastic.Antlr3.Runtime.dll" />
     <Analyzer Include="/home/zzckyy/Unity/Hub/Editor/2022.3.21f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll" />
     <Analyzer Include="/home/zzckyy/Unity/Hub/Editor/2022.3.21f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/scripts/carController.cs" />
+    <Compile Include="Assets/scripts/carControlLane.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
