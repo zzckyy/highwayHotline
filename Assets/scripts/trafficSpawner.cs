@@ -4,39 +4,40 @@ using UnityEngine;
 
 public class trafficSpawner : MonoBehaviour
 {
-    public GameObject carPrefab;
-    float[] lanePositionX = {-2.0f, 0.0f, 2.0f};
+    public GameObject[] carPrefab;
+    float[] lanePositionX = { -2.0f, 0.0f, 2.0f };
+
     public float spawnLocation = 8f;
-    
     public float spawnInterval = 2.0f;
 
-    // Start is called before the first frame update
+    int lastLanePos = -1;
+
     void Start()
     {
-        InvokeRepeating("SpawnTraffic", 3.0f, spawnInterval);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        InvokeRepeating(nameof(SpawnTraffic), 3.0f, spawnInterval);
     }
 
     void SpawnTraffic()
     {
-        int lastLanePos = -1;
-        int randomX = Random.Range(0, lanePositionX.Length);
+        //random lane
+        int randomLane;
         do
         {
-            lastLanePos = Random.Range(0, lanePositionX.Length);
-        } 
-        while (randomX == lastLanePos);
+            randomLane = Random.Range(0, lanePositionX.Length);
+        }
+        while (randomLane == lastLanePos);
 
-        lastLanePos = randomX;
+        lastLanePos = randomLane;
 
-           
-        Vector3 spawnPosition = new Vector3(lanePositionX[randomX], spawnLocation, 0f);
+        //variabel random car spawn
+        int randomCar = Random.Range(0, carPrefab.Length);
 
-        Instantiate(carPrefab, spawnPosition, Quaternion.identity);
+        Vector3 spawnPosition = new Vector3(
+            lanePositionX[randomLane],
+            spawnLocation,
+            0f
+        );
+
+        Instantiate(carPrefab[randomCar], spawnPosition, Quaternion.identity);
     }
 }
