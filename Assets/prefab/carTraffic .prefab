@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 15
+  ledakan: {fileID: 5993358863708382506, guid: 250b745228e09084a8488c041ca19c2c, type: 3}
 --- !u!61 &7947099037327490243
 BoxCollider2D:
   m_ObjectHideFlags: 0

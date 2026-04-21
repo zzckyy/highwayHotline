@@ -5,6 +5,7 @@ public class trafficScript : MonoBehaviour
     Transform transform;
 
     public float moveSpeed = 17.0f;
+    public GameObject ledakan;
     private carBehavior player;
 
     // Start is called before the first frame update
@@ -25,7 +26,9 @@ public class trafficScript : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
+            Instantiate(ledakan, transform.position, Quaternion.identity);
             player.health -= 1;
+            Destroy(gameObject);
             
         }
         else if(other.CompareTag("Boundary"))

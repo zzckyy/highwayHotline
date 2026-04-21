@@ -54,6 +54,7 @@
     <Compile Include="Assets\scripts\carControlLane.cs" />
     <Compile Include="Assets\scripts\trafficSpawner.cs" />
     <Compile Include="Assets\scripts\carController.cs" />
+    <Compile Include="Assets\scripts\explosion.cs" />
     <Compile Include="Assets\scripts\trafficScript.cs" />
   </ItemGroup>
   <ItemGroup>

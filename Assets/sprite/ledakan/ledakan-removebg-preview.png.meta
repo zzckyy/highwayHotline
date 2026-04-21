@@ -1,0 +1,295 @@
+fileFormatVersion: 2
+guid: aec1cbdd816669140818598062898422
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1227490885276353325
+    second: ledakan-removebg-preview_0
+  - first:
+      213: 8147217512679269989
+    second: ledakan-removebg-preview_1
+  - first:
+      213: 4316395397965099558
+    second: ledakan-removebg-preview_2
+  - first:
+      213: -7310630641677214432
+    second: ledakan-removebg-preview_3
+  - first:
+      213: -601924854233014536
+    second: ledakan-removebg-preview_4
+  - first:
+      213: 2061636266091851884
+    second: ledakan-removebg-preview_5
+  - first:
+      213: -8127573474013339211
+    second: ledakan-removebg-preview_6
+  - first:
+      213: -2053857604565878082
+    second: ledakan-removebg-preview_7
+  - first:
+      213: 7659009581953083823
+    second: ledakan-removebg-preview_8
+  - first:
+      213: 7109040656844565304
+    second: ledakan-removebg-preview_9
+  - first:
+      213: 7761167589428902112
+    second: ledakan-removebg-preview_10
+  - first:
+      213: 8684204660392876244
+    second: ledakan-removebg-preview_11
+  - first:
+      213: -1825891731983859205
+    second: ledakan-removebg-preview_12
+  - first:
+      213: -1692518849349696281
+    second: ledakan-removebg-preview_13
+  - first:
+      213: -8798358305608983334
+    second: ledakan-removebg-preview_14
+  - first:
+      213: -3485178111371534926
+    second: ledakan-removebg-preview_15
+  - first:
+      213: 3725837014523214268
+    second: ledakan-removebg-preview_16
+  - first:
+      213: -1409714651026126973
+    second: ledakan-removebg-preview_17
+  - first:
+      213: 4134096179060664968
+    second: ledakan-removebg-preview_18
+  - first:
+      213: 5119572124269181370
+    second: ledakan-removebg-preview_19
+  - first:
+      213: -2759220449351127267
+    second: ledakan-removebg-preview_20
+  - first:
+      213: 7546440936182106153
+    second: ledakan-removebg-preview_21
+  - first:
+      213: 7567313175232777728
+    second: ledakan-removebg-preview_22
+  - first:
+      213: -2415433570906799463
+    second: ledakan-removebg-preview_23
+  - first:
+      213: 7851589145739740960
+    second: ledakan-removebg-preview_24
+  - first:
+      213: -1269835623392056758
+    second: ledakan-removebg-preview_25
+  - first:
+      213: -3026328826234635201
+    second: ledakan-removebg-preview_26
+  - first:
+      213: -3836216042397139336
+    second: ledakan-removebg-preview_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ledakan-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8
+        width: 153
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dcb21a1b8317fee0800000000000000
+      internalID: -1227490885276353325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ledakan-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 8
+        width: 153
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 566e617792bb01170800000000000000
+      internalID: 8147217512679269989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ledakan-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 8
+        width: 153
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62237d5cebae6eb30800000000000000
+      internalID: 4316395397965099558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ledakan-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 8
+        width: 153
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf54c6e3bc329bf43a481a1fa856c8b6
+      internalID: -607606382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: da5421c14f1250046ac9300d5c7c76fb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":153.0,"y":400.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      ledakan-removebg-preview_0: -1227490885276353325
+      ledakan-removebg-preview_1: 8147217512679269989
+      ledakan-removebg-preview_2: 4316395397965099558
+      ledakan-removebg-preview_3: -607606382
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
