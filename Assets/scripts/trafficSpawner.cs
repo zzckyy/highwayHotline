@@ -5,7 +5,7 @@ using UnityEngine;
 public class trafficSpawner : MonoBehaviour
 {
     public GameObject[] carPrefab;
-    float[] lanePositionX = { -2.0f, 0.0f, 2.0f };
+    public float[] lanePositionX = new float[2];
 
     public float spawnLocation = 8f;
     public float spawnInterval = 2.0f;

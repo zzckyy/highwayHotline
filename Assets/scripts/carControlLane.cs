@@ -11,7 +11,8 @@ public class carControlLane : MonoBehaviour
 
     bool isMoving = false;
     int currentLane = 1;
-    float[] lanePositions = {-2.0f, 0.0f, 2.0f};
+    public float[] lanePositions = new float[2];
+    // {-2.0f, 0.0f, 2.0f};
 
     Transform transform;
     // Start is called before the first frame update
