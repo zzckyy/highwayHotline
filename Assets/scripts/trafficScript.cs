@@ -5,11 +5,13 @@ public class trafficScript : MonoBehaviour
     Transform transform;
 
     public float moveSpeed = 17.0f;
+    private carBehavior player;
 
     // Start is called before the first frame update
     void Start()
     {
         transform = GetComponent<Transform>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<carBehavior>();
     }
 
     // Update is called once per frame
@@ -23,7 +25,7 @@ public class trafficScript : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            Debug.Log("Collided with Player");
+            player.health -= 1;
             
         }
         else if(other.CompareTag("Boundary"))

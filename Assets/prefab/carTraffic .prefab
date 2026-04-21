@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 2816254030021171258}
   - component: {fileID: 6714631359741146540}
   - component: {fileID: 7947099037327490243}
+  - component: {fileID: 750266655918615713}
   m_Layer: 0
   m_Name: 'carTraffic '
-  m_TagString: Untagged
+  m_TagString: traffic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473a9c648808629e598830ea97967ba1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 11
+  moveSpeed: 15
 --- !u!61 &7947099037327490243
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -152,3 +153,30 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.51, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &750266655918615713
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2958678162068617756}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
