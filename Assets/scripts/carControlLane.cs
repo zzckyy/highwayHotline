@@ -6,12 +6,15 @@ public class carControlLane : MonoBehaviour
 {
 
     // public float laneDistance = 2.0f;
+    [Header("Movement")]
     public float moveSpeed = 5.0f;
     public float laneChangeSpeed = 10.0f;
 
     bool isMoving = false;
     int currentLane = 1;
+    [Header("Lane")]
     public float[] lanePositions = new float[2];
+    [Header("Game Object Link")]
 
     public Animator _animator;
 
