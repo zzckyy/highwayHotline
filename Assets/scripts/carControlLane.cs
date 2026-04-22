@@ -22,11 +22,11 @@ public class carControlLane : MonoBehaviour
     
     // {-2.0f, 0.0f, 2.0f};
 
-    Transform transform;
+    Transform _tf;
     // Start is called before the first frame update
     void Start()
     {
-        transform = GetComponent<Transform>();
+        _tf = GetComponent<Transform>();
         isIntro = true;
         
     }
@@ -46,8 +46,8 @@ public class carControlLane : MonoBehaviour
             MoveLane(1);
         }
 
-        Vector3 targetPosition = new Vector3(lanePositions[currentLane], transform.position.y, transform.position.z);
-        transform.position = Vector3.Lerp(transform.position, targetPosition, moveSpeed * Time.deltaTime * laneChangeSpeed);
+        Vector3 targetPosition = new Vector3(lanePositions[currentLane], _tf.position.y, _tf.position.z);
+        _tf.position = Vector3.Lerp(_tf.position, targetPosition, moveSpeed * Time.deltaTime * laneChangeSpeed);
 
         
     }
