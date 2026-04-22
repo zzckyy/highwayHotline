@@ -12,6 +12,11 @@ public class carControlLane : MonoBehaviour
     bool isMoving = false;
     int currentLane = 1;
     public float[] lanePositions = new float[2];
+
+    public Animator _animator;
+
+    bool isIntro;
+    
     // {-2.0f, 0.0f, 2.0f};
 
     Transform transform;
@@ -19,11 +24,15 @@ public class carControlLane : MonoBehaviour
     void Start()
     {
         transform = GetComponent<Transform>();
+        isIntro = true;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(isIntro) return;
+
         if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
             MoveLane(-1);
@@ -42,8 +51,7 @@ public class carControlLane : MonoBehaviour
 
     void MoveLane(int direction)
     {
-        if(isMoving)
-            return;
+        if(isMoving) return;
 
         int targetLane = currentLane + direction;
         if(targetLane >= 0 && targetLane < lanePositions.Length)
@@ -62,5 +70,11 @@ public class carControlLane : MonoBehaviour
     public void MoveRight()
     {
         MoveLane(1);
+    }
+
+    public void end_intro()
+    {
+        _animator.enabled = false;
+        isIntro = false;
     }
 }
