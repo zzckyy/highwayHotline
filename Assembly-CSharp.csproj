@@ -54,6 +54,7 @@
     <Compile Include="Assets\scripts\carBehavior.cs" />
     <Compile Include="Assets\scripts\heathPickup.cs" />
     <Compile Include="Assets\scripts\carControlLane.cs" />
+    <Compile Include="Assets\scripts\gameSettings.cs" />
     <Compile Include="Assets\scripts\trafficSpawner.cs" />
     <Compile Include="Assets\scripts\carController.cs" />
     <Compile Include="Assets\scripts\explosion.cs" />
