@@ -45,8 +45,15 @@ public class scoreDistanceSystem : MonoBehaviour
 
     void UpdateUI()
     {
+        if(distanceText != null)
+        {
         distanceText.text = distance.ToString("F1") + " m";
+        }
+        if(scoreText != null)
+        {
+            
         scoreText.text = score.ToString();
+        }
     }
 
     public void StartGame()

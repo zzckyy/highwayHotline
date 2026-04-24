@@ -19,9 +19,12 @@ public class gameSettings : MonoBehaviour
         // default value
         // musicSlider.value = PlayerPrefs.GetFloat("musicVol", 0.75f);
         // sfxSlider.value = PlayerPrefs.GetFloat("sfxVol", 0.75f);
-
+        if(musicSlider != null || sfxSlider != null )
+        {
         SetMusicVolume(musicSlider.value);
         SetSFXVolume(sfxSlider.value);
+            
+        }
     }
 
     void Update()
