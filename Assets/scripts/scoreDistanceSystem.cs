@@ -11,13 +11,13 @@ public class scoreDistanceSystem : MonoBehaviour
     public float distanceMultiplier = 1f; // biar bisa tuning
     public int scorePerMeter = 10;
 
-    float distance = 0f;
     int score = 0;
 
     int highScore;
 
     [HideInInspector]
     public bool isPlaying = false;
+    public float distance = 0f;
 
     void Start()
     {
