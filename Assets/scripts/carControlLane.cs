@@ -9,8 +9,6 @@ public class carControlLane : MonoBehaviour
     [Header("Movement")]
     public float moveSpeed = 5.0f;
     public float laneChangeSpeed = 10.0f;
-
-    bool isMoving = false;
     int currentLane = 1;
     [Header("Lane")]
     public float[] lanePositions = new float[2];
@@ -19,6 +17,8 @@ public class carControlLane : MonoBehaviour
     public Animator _animator;
 
     bool isIntro;
+
+    scoreDistanceSystem _scoreDistanceSystem;
     
     // {-2.0f, 0.0f, 2.0f};
 
@@ -28,6 +28,7 @@ public class carControlLane : MonoBehaviour
     {
         _tf = GetComponent<Transform>();
         isIntro = true;
+        _scoreDistanceSystem = GameObject.FindGameObjectWithTag("GameController").GetComponent<scoreDistanceSystem>();
         
     }
 
@@ -46,6 +47,11 @@ public class carControlLane : MonoBehaviour
             MoveLane(1);
         }
 
+        else if (Input.anyKeyDown)
+        {
+            _scoreDistanceSystem.StartGame();
+        }
+
         Vector3 targetPosition = new Vector3(lanePositions[currentLane], _tf.position.y, _tf.position.z);
         _tf.position = Vector3.Lerp(_tf.position, targetPosition, moveSpeed * Time.deltaTime * laneChangeSpeed);
 
@@ -54,7 +60,7 @@ public class carControlLane : MonoBehaviour
 
     void MoveLane(int direction)
     {
-        if(isMoving) return;
+        if(_scoreDistanceSystem.isPlaying == false) return;
 
         int targetLane = currentLane + direction;
         if(targetLane >= 0 && targetLane < lanePositions.Length)

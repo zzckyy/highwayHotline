@@ -14,11 +14,14 @@ public class scoreDistanceSystem : MonoBehaviour
     float distance = 0f;
     int score = 0;
 
-    bool isPlaying = false;
+    int highScore;
+
+    [HideInInspector]
+    public bool isPlaying = false;
 
     void Start()
     {
-        StartGame();
+        highScore = PlayerPrefs.GetInt("Highscore");
     }
 
     void Update()
@@ -30,8 +33,14 @@ public class scoreDistanceSystem : MonoBehaviour
 
         // score dari distance
         score = Mathf.FloorToInt(distance * scorePerMeter);
+        
+
+        highScore = (score > highScore) ? score : highScore;
+        PlayerPrefs.SetInt("Highscore", highScore);
+
 
         UpdateUI();
+
     }
 
     void UpdateUI()

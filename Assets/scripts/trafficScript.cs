@@ -20,8 +20,7 @@ public class trafficScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Vector3 targetPosition = Vector3.Lerp(transform.position, new Vector3(transform.position.x, transform.position.y  - moveSpeed * Time.deltaTime, transform.position.z), moveSpeed * Time.deltaTime);
-        transform.position = targetPosition;
+        transform.Translate(Vector3.down * moveSpeed * Time.deltaTime);
         
     }
     void OnTriggerEnter2D(Collider2D other)

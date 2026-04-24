@@ -10,15 +10,19 @@ public class trafficSpawner : MonoBehaviour
     public float spawnLocation = 8f;
     public float spawnInterval = 2.0f;
 
+    scoreDistanceSystem _scoreDistanceSystem;
+
     int lastLanePos = -1;
 
     void Start()
     {
         InvokeRepeating(nameof(SpawnTraffic), 3.0f, spawnInterval);
+        _scoreDistanceSystem = GameObject.FindGameObjectWithTag("GameController").GetComponent<scoreDistanceSystem>();
     }
 
     void SpawnTraffic()
     {
+        if(_scoreDistanceSystem.isPlaying == false) return;
         //random lane
         int randomLane;
         do
