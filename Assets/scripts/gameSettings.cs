@@ -30,6 +30,10 @@ public class gameSettings : MonoBehaviour
 
     public UIState state;
 
+    void Start()
+    {
+        SetStateInt(4);
+    }
 
     public void SetStateInt(int stateIndex)
     {
