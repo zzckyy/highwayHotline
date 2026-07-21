@@ -21,7 +21,7 @@ public class carBehavior : MonoBehaviour
 
         if(health <= 0)
         {
-            gameSettings.SetState(gameSettings.UIState.Pause);
+            gameSettings.SetState(gameSettings.UIState.GameOver);
         }
     }
 }

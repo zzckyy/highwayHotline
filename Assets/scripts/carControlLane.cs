@@ -51,7 +51,7 @@ public class carControlLane : MonoBehaviour
 
         else if (Input.anyKeyDown)
         {
-            _scoreDistanceSystem.StartGame();
+            _gs.SetState(gameSettings.UIState.Gameplay);
         }
 
         Vector3 targetPosition = new Vector3(lanePositions[currentLane], _tf.position.y, _tf.position.z);

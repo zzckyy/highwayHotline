@@ -13,6 +13,7 @@ public class gameSettings : MonoBehaviour
     public GameObject uiPause;
     public GameObject uiWin;
     public GameObject uiGameover;
+    public GameObject uiMainMenu;
 
 
     public enum UIState
@@ -20,7 +21,8 @@ public class gameSettings : MonoBehaviour
         Gameplay,
         Pause,
         Win,
-        GameOver
+        GameOver,
+        MainMenu
     }
 
 
@@ -43,6 +45,7 @@ public class gameSettings : MonoBehaviour
         uiPause.SetActive(false);
         uiWin.SetActive(false);
         uiGameover.SetActive(false);
+        uiMainMenu.SetActive(false);
     }
 
     public void SetState(UIState state)
@@ -52,6 +55,7 @@ public class gameSettings : MonoBehaviour
         switch (state)
         {
             case UIState.Gameplay:
+                isPlay = true;
                 uiGameplay.SetActive(true);
                 Time.timeScale = 1f;
                 break;
@@ -59,16 +63,25 @@ public class gameSettings : MonoBehaviour
             case UIState.Pause:
                 uiPause.SetActive(true);
                 Time.timeScale = 0f;
+                isPlay = false;
                 break;
 
             case UIState.Win:
                 uiWin.SetActive(true);
                 Time.timeScale = 0f;
+                isPlay = false;
                 break;
 
             case UIState.GameOver:
                 uiGameover.SetActive(true);
                 Time.timeScale = 0f;
+                isPlay = false;
+                break;
+
+            case UIState.MainMenu:
+                isPlay = false;
+                uiMainMenu.SetActive(true);
+                Time.timeScale = 1f;
                 break;
         }
     }

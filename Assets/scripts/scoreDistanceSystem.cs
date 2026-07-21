@@ -36,21 +36,4 @@ public class scoreDistanceSystem : MonoBehaviour
         distanceText.text = Mathf.RoundToInt(distance).ToString() + " M";
         }
     }
-
-    public void StartGame()
-    {
-        _gs.isPlay = true;
-    }
-
-    public void StopGame()
-    {
-        _gs.isPlay = false;
-    }
-
-    // BONUS SYSTEM (optional)
-    public void AddScore(int amount)
-    {
-        score += amount;
-        UpdateUI();
-    }
 }

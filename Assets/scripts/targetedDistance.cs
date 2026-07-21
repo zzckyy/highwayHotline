@@ -14,6 +14,8 @@ public class targetedDistance : MonoBehaviour
     public Slider targetDistanceSlider;
     public float targetDistance;
     public TMP_Text targetDistanceUI;
+
+    public gameSettings _gs;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,17 +31,7 @@ public class targetedDistance : MonoBehaviour
         targetDistanceUI.text = Mathf.RoundToInt(targetDistance).ToString();
         if(_scoreDistanceSystem.distance >= targetDistance)
         {
-            gameMenang();
+            _gs.SetState(gameSettings.UIState.Win);
         }
-    }
-
-    public void gameMenang()
-    {
-        _scoreDistanceSystem.StopGame();
-
-        winPanel.SetActive(true);
-        winSound.Play();
-
-        _ekonomi.Point += Mathf.FloorToInt(targetDistance);
     }
 }
