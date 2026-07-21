@@ -4,16 +4,12 @@ using TMPro;
 public class scoreDistanceSystem : MonoBehaviour
 {
     [Header("UI")]
-    public TMP_Text scoreText;
     public TMP_Text distanceText;
 
     [Header("Settings")]
-    public float distanceMultiplier = 1f; // biar bisa tuning
-    public int scorePerMeter = 10;
+    public float distanceMultiplier = 1f;
 
     int score = 0;
-
-    int highScore;
 
     [HideInInspector]
     public bool isPlaying = false;
@@ -21,7 +17,7 @@ public class scoreDistanceSystem : MonoBehaviour
 
     void Start()
     {
-        highScore = PlayerPrefs.GetInt("Highscore");
+        
     }
 
     void Update()
@@ -31,28 +27,14 @@ public class scoreDistanceSystem : MonoBehaviour
         // distance naik terus (endless runner style)
         distance += Time.deltaTime * distanceMultiplier;
 
-        // score dari distance
-        score = Mathf.FloorToInt(distance * scorePerMeter);
-        
-
-        highScore = (score > highScore) ? score : highScore;
-        PlayerPrefs.SetInt("Highscore", highScore);
-
-
         UpdateUI();
-
     }
 
     void UpdateUI()
     {
         if(distanceText != null)
         {
-        distanceText.text = distance.ToString("F1") + " m";
-        }
-        if(scoreText != null)
-        {
-            
-        scoreText.text = score.ToString();
+        distanceText.text = distance.ToString("F1") + " M";
         }
     }
 

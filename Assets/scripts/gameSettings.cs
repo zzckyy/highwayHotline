@@ -73,4 +73,10 @@ public class gameSettings : MonoBehaviour
         PlayerPrefs.SetFloat("sfxVol", value);
         PlayerPrefs.Save();
     }
+
+    public void gameOver(GameObject gameOverUI)
+    {
+        Time.timeScale = 0;
+        gameOverUI.SetActive(true);;
+    }
 }
