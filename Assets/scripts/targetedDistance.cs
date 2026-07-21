@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using TMPro;
 
 public class targetedDistance : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class targetedDistance : MonoBehaviour
     [Header("Distance Target")]
     public Slider targerDistanceSlider;
     public float targetDistance;
-    public Text targetDistanceUI;
+    public TMP_Text targetDistanceUI;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
