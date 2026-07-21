@@ -22,7 +22,7 @@ public class targetedDistance : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        targetDistanceUI.text = targetDistance.ToString();
+        targetDistanceUI.text = Mathf.RoundToInt(targetDistance).ToString();
         if(_scoreDistanceSystem.distance >= targetDistance)
         {
             gameMenang();

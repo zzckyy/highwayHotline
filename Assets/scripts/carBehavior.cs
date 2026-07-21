@@ -3,7 +3,7 @@ using UnityEngine;
 public class carBehavior : MonoBehaviour
 {
     public int health = 1;
-    public int maxHealth = 3;
+    public int maxHealth = 1;
 
     public gameSettings _gs;
     public GameObject gameOverUI;

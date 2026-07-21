@@ -34,7 +34,7 @@ public class scoreDistanceSystem : MonoBehaviour
     {
         if(distanceText != null)
         {
-        distanceText.text = distance.ToString("F1") + " M";
+        distanceText.text = Mathf.RoundToInt(distance).ToString() + " M";
         }
     }
 
