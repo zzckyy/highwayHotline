@@ -6,6 +6,7 @@ public class gameSettings : MonoBehaviour
 
     [Header("Attach To System")]
     public scoreDistanceSystem _scoreDistanceSystem;
+    public economySystem _ekonomi;
 
     [HideInInspector]
     public bool isPlay;
@@ -27,9 +28,13 @@ public class gameSettings : MonoBehaviour
         MainMenu
     }
 
-    void Update()
-    {
+    public UIState state;
 
+
+    public void SetStateInt(int stateIndex)
+    {
+        state = (UIState)stateIndex;
+        SetState(state);
     }
 
     public void HideAll()
@@ -46,36 +51,45 @@ public class gameSettings : MonoBehaviour
         switch (state)
         {
             case UIState.Gameplay:
+                HideAll();
                 isPlay = true;
                 uiGameplay.SetActive(true);
                 Time.timeScale = 1f;
                 break;
 
             case UIState.Pause:
+                HideAll();
                 uiPause.SetActive(true);
                 Time.timeScale = 0f;
                 isPlay = false;
                 break;
 
             case UIState.Win:
+                HideAll();
                 uiWin.SetActive(true);
                 Time.timeScale = 0f;
                 isPlay = false;
+                _ekonomi.Point = +Mathf.FloorToInt(_scoreDistanceSystem.distance);
                 break;
 
             case UIState.GameOver:
+                HideAll();
                 uiGameover.SetActive(true);
                 Time.timeScale = 0f;
                 isPlay = false;
+                _ekonomi.Point -= Mathf.FloorToInt(_scoreDistanceSystem.distance * 2);
                 break;
 
             case UIState.MainMenu:
+                HideAll();
                 isPlay = false;
                 uiMainMenu.SetActive(true);
                 Time.timeScale = 1f;
                 break;
         }
     }
+
+
 
     public void exitGame()
     {

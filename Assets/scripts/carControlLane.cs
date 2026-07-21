@@ -5,7 +5,6 @@ using UnityEngine;
 public class carControlLane : MonoBehaviour
 {
 
-    // public float laneDistance = 2.0f;
     [Header("Movement")]
     public float moveSpeed = 5.0f;
     public float laneChangeSpeed = 10.0f;
@@ -25,7 +24,7 @@ public class carControlLane : MonoBehaviour
     // {-2.0f, 0.0f, 2.0f};
 
     Transform _tf;
-    
+
     void Start()
     {
         _tf = GetComponent<Transform>();
