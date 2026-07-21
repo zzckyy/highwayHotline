@@ -8,11 +8,10 @@ public class scoreDistanceSystem : MonoBehaviour
 
     [Header("Settings")]
     public float distanceMultiplier = 1f;
+    public targetedDistance _targetedDistance;
+    public gameSettings _gs;
 
     int score = 0;
-
-    [HideInInspector]
-    public bool isPlaying = false;
     public float distance = 0f;
 
     void Start()
@@ -22,7 +21,7 @@ public class scoreDistanceSystem : MonoBehaviour
 
     void Update()
     {
-        if (!isPlaying) return;
+        if (!_gs.isPlay) return;
 
         // distance naik terus (endless runner style)
         distance += Time.deltaTime * distanceMultiplier;
@@ -40,12 +39,12 @@ public class scoreDistanceSystem : MonoBehaviour
 
     public void StartGame()
     {
-        isPlaying = true;
+        _gs.isPlay = true;
     }
 
     public void StopGame()
     {
-        isPlaying = false;
+        _gs.isPlay = false;
     }
 
     // BONUS SYSTEM (optional)

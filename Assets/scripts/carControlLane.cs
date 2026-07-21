@@ -19,6 +19,8 @@ public class carControlLane : MonoBehaviour
     bool isIntro;
 
     scoreDistanceSystem _scoreDistanceSystem;
+
+    public gameSettings _gs;
     
     // {-2.0f, 0.0f, 2.0f};
 
@@ -60,7 +62,7 @@ public class carControlLane : MonoBehaviour
 
     void MoveLane(int direction)
     {
-        if(_scoreDistanceSystem.isPlaying == false) return;
+        if(_scoreDistanceSystem._gs.isPlay == false) return;
 
         int targetLane = currentLane + direction;
         if(targetLane >= 0 && targetLane < lanePositions.Length)

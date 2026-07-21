@@ -5,8 +5,7 @@ public class carBehavior : MonoBehaviour
     public int health = 1;
     public int maxHealth = 1;
 
-    public gameSettings _gs;
-    public GameObject gameOverUI;
+    public gameSettings gameSettings;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,7 +21,7 @@ public class carBehavior : MonoBehaviour
 
         if(health <= 0)
         {
-            _gs.gameOver(gameOverUI);
+            gameSettings.SetState(gameSettings.UIState.Pause);
         }
     }
 }

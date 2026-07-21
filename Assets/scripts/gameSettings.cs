@@ -3,14 +3,25 @@ using UnityEngine.Audio;
 using UnityEngine.UI;
 public class gameSettings : MonoBehaviour
 {
-    public AudioMixer mixer;
-
-    [Header("UI Slider")]
-    public Slider musicSlider;
-    public Slider sfxSlider;
 
     [Header("Attach To System")]
     public scoreDistanceSystem _scoreDistanceSystem;
+    public bool isPlay;
+
+    [Header("UI Game Object")]
+    public GameObject uiGameplay;
+    public GameObject uiPause;
+    public GameObject uiWin;
+    public GameObject uiGameover;
+
+
+    public enum UIState
+    {
+        Gameplay,
+        Pause,
+        Win,
+        GameOver
+    }
 
 
 
@@ -18,16 +29,7 @@ public class gameSettings : MonoBehaviour
 
     void Start()
     {
-        isPause = false;
-        // default value
-        // musicSlider.value = PlayerPrefs.GetFloat("musicVol", 0.75f);
-        // sfxSlider.value = PlayerPrefs.GetFloat("sfxVol", 0.75f);
-        if(musicSlider != null || sfxSlider != null )
-        {
-        SetMusicVolume(musicSlider.value);
-        SetSFXVolume(sfxSlider.value);
-            
-        }
+        
     }
 
     void Update()
@@ -35,53 +37,44 @@ public class gameSettings : MonoBehaviour
 
     }
 
-    public void pause()
+    public void HideAll()
     {
-        Time.timeScale = 0;
-        isPause = true;
-        mixer.SetFloat("music", -80);
+        uiGameplay.SetActive(false);
+        uiPause.SetActive(false);
+        uiWin.SetActive(false);
+        uiGameover.SetActive(false);
     }
 
-    public void resume()
+    public void SetState(UIState state)
     {
-        Time.timeScale = 1;
-        isPause = false;
+        HideAll();
 
-        float value = PlayerPrefs.GetFloat("musicVol", 0.75f);
-        float dB = Mathf.Log10(Mathf.Clamp(value, 0.0001f, 1f)) * 20;
+        switch (state)
+        {
+            case UIState.Gameplay:
+                uiGameplay.SetActive(true);
+                Time.timeScale = 1f;
+                break;
 
-        mixer.SetFloat("music", PlayerPrefs.GetFloat("musicVol", value));
+            case UIState.Pause:
+                uiPause.SetActive(true);
+                Time.timeScale = 0f;
+                break;
+
+            case UIState.Win:
+                uiWin.SetActive(true);
+                Time.timeScale = 0f;
+                break;
+
+            case UIState.GameOver:
+                uiGameover.SetActive(true);
+                Time.timeScale = 0f;
+                break;
+        }
     }
 
     public void exitGame()
     {
         Application.Quit();
-    }
-
-    public void SetMusicVolume(float value)
-    {
-        // convert ke dB
-        float dB = Mathf.Log10(Mathf.Clamp(value, 0.0001f, 1f)) * 20;
-        mixer.SetFloat("music", dB);
-
-        PlayerPrefs.SetFloat("musicVol", value);
-        PlayerPrefs.Save();
-    }
-
-    public void SetSFXVolume(float value)
-    {
-        float dB = Mathf.Log10(Mathf.Clamp(value, 0.0001f, 1f)) * 20;
-        mixer.SetFloat("sfx", dB);
-
-        PlayerPrefs.SetFloat("sfxVol", value);
-        PlayerPrefs.Save();
-    }
-
-    public void gameOver(GameObject gameOverUI)
-    {
-        Time.timeScale = 0;
-        gameOverUI.SetActive(true);
-        _scoreDistanceSystem.StopGame();
-        
     }
 }

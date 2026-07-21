@@ -11,6 +11,7 @@ public class trafficSpawner : MonoBehaviour
     public float spawnInterval = 2.0f;
 
     scoreDistanceSystem _scoreDistanceSystem;
+    public gameSettings _gs;
 
     int lastLanePos = -1;
 
@@ -22,7 +23,7 @@ public class trafficSpawner : MonoBehaviour
 
     void SpawnTraffic()
     {
-        if(_scoreDistanceSystem.isPlaying == false) return;
+        if(_scoreDistanceSystem._gs.isPlay == false) return;
         //random lane
         int randomLane;
         do

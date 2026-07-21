@@ -11,7 +11,7 @@ public class targetedDistance : MonoBehaviour
     AudioSource winSound;
 
     [Header("Distance Target")]
-    public Slider targerDistanceSlider;
+    public Slider targetDistanceSlider;
     public float targetDistance;
     public TMP_Text targetDistanceUI;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -24,7 +24,7 @@ public class targetedDistance : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        targetDistance = targerDistanceSlider.value;
+        targetDistance = targetDistanceSlider.value;
 
         targetDistanceUI.text = Mathf.RoundToInt(targetDistance).ToString();
         if(_scoreDistanceSystem.distance >= targetDistance)
