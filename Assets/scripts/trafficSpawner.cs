@@ -23,7 +23,8 @@ public class trafficSpawner : MonoBehaviour
 
     void SpawnTraffic()
     {
-        if(_scoreDistanceSystem._gs.isPlay == false) return;
+        if (_gs.isPlay == false) return;
+
         //random lane
         int randomLane;
         do

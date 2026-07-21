@@ -25,7 +25,7 @@ public class carControlLane : MonoBehaviour
     // {-2.0f, 0.0f, 2.0f};
 
     Transform _tf;
-    // Start is called before the first frame update
+    
     void Start()
     {
         _tf = GetComponent<Transform>();
@@ -34,10 +34,12 @@ public class carControlLane : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(isIntro) return;
+        if (Input.anyKeyDown)
+        {
+            _gs.SetState(gameSettings.UIState.Gameplay);
+        }
 
         if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
@@ -49,10 +51,6 @@ public class carControlLane : MonoBehaviour
             MoveLane(1);
         }
 
-        else if (Input.anyKeyDown)
-        {
-            _gs.SetState(gameSettings.UIState.Gameplay);
-        }
 
         Vector3 targetPosition = new Vector3(lanePositions[currentLane], _tf.position.y, _tf.position.z);
         _tf.position = Vector3.Lerp(_tf.position, targetPosition, moveSpeed * Time.deltaTime * laneChangeSpeed);
@@ -69,8 +67,6 @@ public class carControlLane : MonoBehaviour
         {
             currentLane = targetLane;
         }
-
-        // Debug.Log("Current Lane: " + currentLane + "direction: " + direction);
     }
 
     public void MoveLeft()
@@ -81,11 +77,5 @@ public class carControlLane : MonoBehaviour
     public void MoveRight()
     {
         MoveLane(1);
-    }
-
-    public void end_intro()
-    {
-        _animator.enabled = false;
-        isIntro = false;
     }
 }

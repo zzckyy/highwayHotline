@@ -6,6 +6,8 @@ public class gameSettings : MonoBehaviour
 
     [Header("Attach To System")]
     public scoreDistanceSystem _scoreDistanceSystem;
+
+    [HideInInspector]
     public bool isPlay;
 
     [Header("UI Game Object")]
@@ -25,15 +27,6 @@ public class gameSettings : MonoBehaviour
         MainMenu
     }
 
-
-
-    bool isPause;
-
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
 
@@ -50,8 +43,6 @@ public class gameSettings : MonoBehaviour
 
     public void SetState(UIState state)
     {
-        HideAll();
-
         switch (state)
         {
             case UIState.Gameplay:

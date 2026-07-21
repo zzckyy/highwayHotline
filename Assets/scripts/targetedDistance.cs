@@ -6,8 +6,6 @@ using TMPro;
 public class targetedDistance : MonoBehaviour
 {
     scoreDistanceSystem _scoreDistanceSystem;
-    public economySystem _ekonomi;
-    public GameObject winPanel;
     AudioSource winSound;
 
     [Header("Distance Target")]
