@@ -5,6 +5,7 @@ using UnityEngine.Audio;
 public class targetedDistance : MonoBehaviour
 {
     scoreDistanceSystem _scoreDistanceSystem;
+    public economySystem _ekonomi;
     public GameObject winPanel;
     AudioSource winSound;
 
@@ -34,5 +35,7 @@ public class targetedDistance : MonoBehaviour
 
         winPanel.SetActive(true);
         winSound.Play();
+
+        _ekonomi.Point += Mathf.FloorToInt(targetDistance);
     }
 }
