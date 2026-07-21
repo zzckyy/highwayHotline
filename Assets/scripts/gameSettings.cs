@@ -9,6 +9,9 @@ public class gameSettings : MonoBehaviour
     public Slider musicSlider;
     public Slider sfxSlider;
 
+    [Header("Attach To System")]
+    public scoreDistanceSystem _scoreDistanceSystem;
+
 
 
     bool isPause;
@@ -77,6 +80,8 @@ public class gameSettings : MonoBehaviour
     public void gameOver(GameObject gameOverUI)
     {
         Time.timeScale = 0;
-        gameOverUI.SetActive(true);;
+        gameOverUI.SetActive(true);
+        _scoreDistanceSystem.StopGame();
+        
     }
 }

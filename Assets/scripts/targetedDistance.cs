@@ -10,6 +10,7 @@ public class targetedDistance : MonoBehaviour
 
     [Header("Distance Target")]
     public float targetDistance;
+    public Text targetDistanceUI;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,6 +21,7 @@ public class targetedDistance : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        targetDistanceUI.text = targetDistance.ToString();
         if(_scoreDistanceSystem.distance >= targetDistance)
         {
             gameMenang();
