@@ -21,6 +21,8 @@ public class carBehavior : MonoBehaviour
     public gameSettings _gs;
     public CarClass carClassType;
 
+    
+
     public void InitStats(CarClass type)
     {
         switch (type)
@@ -43,5 +45,11 @@ public class carBehavior : MonoBehaviour
                 _playerCar.sprite = CarSprite[2];
                 break;
         }
+    }
+
+    public void SetClassCar(int state)
+    {
+        carClassType = (CarClass)state;
+        InitStats(carClassType);
     }
 }
