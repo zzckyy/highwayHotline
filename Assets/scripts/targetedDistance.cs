@@ -14,6 +14,7 @@ public class targetedDistance : MonoBehaviour
     public TMP_Text targetDistanceUI;
 
     public gameSettings _gs;
+    public economySystem _ekonomi;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,5 +32,12 @@ public class targetedDistance : MonoBehaviour
         {
             _gs.SetState(gameSettings.UIState.Win);
         }
+
+        // if(_gs.state = gameSettings.UIState.Win)
+        // {
+        //     Debug.Log("Menang");
+        //     PlayerPrefs.SetInt("Point", _ekonomi.Point);
+        //     PlayerPrefs.Save();
+        // }
     }
 }

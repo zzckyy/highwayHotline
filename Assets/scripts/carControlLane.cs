@@ -11,11 +11,6 @@ public class carControlLane : MonoBehaviour
     int currentLane = 1;
     [Header("Lane")]
     public float[] lanePositions = new float[2];
-    [Header("Game Object Link")]
-
-    public Animator _animator;
-
-    bool isIntro;
 
     scoreDistanceSystem _scoreDistanceSystem;
 
@@ -28,7 +23,6 @@ public class carControlLane : MonoBehaviour
     void Start()
     {
         _tf = GetComponent<Transform>();
-        isIntro = true;
         _scoreDistanceSystem = GameObject.FindGameObjectWithTag("GameController").GetComponent<scoreDistanceSystem>();
         
     }

@@ -1,27 +1,47 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class carBehavior : MonoBehaviour
 {
-    public int health = 1;
-    public int maxHealth = 1;
+    public Sprite[] CarSprite;
+    public int health;
+    public float speed;
 
-    public gameSettings gameSettings;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    SpriteRenderer _playerCar;
+
     void Start()
     {
-        
+        _playerCar = GetComponent<SpriteRenderer>();
+    }
+    public enum CarClass
+    {
+        Ambulance, Police, Damkar
     }
 
-    // Update is called once per frame
-    void Update()
+    public gameSettings _gs;
+    public CarClass carClassType;
+
+    public void InitStats(CarClass type)
     {
-        health = (health >= maxHealth) ? health = maxHealth : health;
-
-        // Debug.Log("health: " + health + "max health: " + maxHealth);
-
-        if(health <= 0)
+        switch (type)
         {
-            gameSettings.SetState(gameSettings.UIState.GameOver);
+            case CarClass.Ambulance:
+                health = 2;
+                speed = 1.5f;
+                _playerCar.sprite = CarSprite[0];
+                break;
+
+            case CarClass.Police:
+                health = 1;
+                speed = 2f;
+                _playerCar.sprite = CarSprite[1];
+                break;
+
+            case CarClass.Damkar:
+                health = 3;
+                speed = 1f;
+                _playerCar.sprite = CarSprite[2];
+                break;
         }
     }
 }
