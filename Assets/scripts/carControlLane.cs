@@ -29,10 +29,6 @@ public class carControlLane : MonoBehaviour
 
     void Update()
     {
-        if (Input.anyKeyDown)
-        {
-            _gs.SetState(gameSettings.UIState.Gameplay);
-        }
 
         if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
