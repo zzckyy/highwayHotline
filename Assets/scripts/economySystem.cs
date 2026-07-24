@@ -5,12 +5,15 @@ using TMPro;
 public class economySystem : MonoBehaviour
 {
     public int Point;
+    public int PointOnRun;
 
     public TMP_Text pointDisplay;
 
     // Update is called once per frame
     void Update()
     {
-        pointDisplay.text = "Point: " + Point.ToString();
+        Point = PlayerPrefs.GetInt("Point", 0);
+        pointDisplay.text = "Point: " + Point;
+        Debug.Log("point: " + Point);
     }
 }

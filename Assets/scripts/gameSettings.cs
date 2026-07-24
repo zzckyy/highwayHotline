@@ -11,6 +11,8 @@ public class gameSettings : MonoBehaviour
     public economySystem _ekonomi;
     public Transform _playerPos;
     public AudioSource music;
+    bool isWinProccessed;
+
 
     [HideInInspector]
     public bool isPlay;
@@ -63,6 +65,7 @@ public class gameSettings : MonoBehaviour
                 isPlay = true;
                 uiGameplay.SetActive(true);
                 Time.timeScale = 1f;
+                isWinProccessed = false;
                 break;
 
             case UIState.Pause:
@@ -73,11 +76,20 @@ public class gameSettings : MonoBehaviour
                 break;
 
             case UIState.Win:
-                HideAll();
-                uiWin.SetActive(true);
-                Time.timeScale = 0f;
-                isPlay = false;
-                _ekonomi.Point += Mathf.FloorToInt(_scoreDistanceSystem.distance);
+                if (!isWinProccessed)
+                {
+                    HideAll();
+                    uiWin.SetActive(true);
+                    Time.timeScale = 0f;
+                    isPlay = false;
+                    int Reward = Mathf.FloorToInt(_scoreDistanceSystem.distance);
+                    _ekonomi.Point += Reward;
+
+                    isWinProccessed = true;
+
+                    PlayerPrefs.SetInt("Point", _ekonomi.Point);
+                    PlayerPrefs.Save();
+                }
                 break;
 
             case UIState.GameOver:
@@ -85,7 +97,7 @@ public class gameSettings : MonoBehaviour
                 uiGameover.SetActive(true);
                 Time.timeScale = 1f;
                 isPlay = false;
-                _ekonomi.Point -= Mathf.FloorToInt(_scoreDistanceSystem.distance * 2);
+                _ekonomi.PointOnRun = 0;
                 _playerPos.position -= Vector3.down * 3;
                 break;
 
@@ -94,13 +106,15 @@ public class gameSettings : MonoBehaviour
                 isPlay = false;
                 uiMainMenu.SetActive(true);
                 Time.timeScale = 1f;
+                
+                PlayerPrefs.GetInt("Point", 0);
                 break;
         }
     }
 
     public void Update()
     {
-        if(isPlay){music.mute = false;} else{music.mute = true;}
+        if (isPlay) { music.mute = false; } else { music.mute = true; }
     }
 
 

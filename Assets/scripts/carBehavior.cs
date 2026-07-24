@@ -12,6 +12,7 @@ public class carBehavior : MonoBehaviour
     void Start()
     {
         _playerCar = GetComponent<SpriteRenderer>();
+        SetClassCar(0);
     }
     public enum CarClass
     {
