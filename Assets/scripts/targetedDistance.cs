@@ -38,12 +38,11 @@ public class targetedDistance : MonoBehaviour
 
     }
 
-    public void SetRandomDistance(int MinSlider, int MaxSlider)
+    public void SetRandomDistance()
     {
-        MinSlider = 50; MaxSlider = 1000;
 
-        targetDistanceSlider.minValue = MinSlider;
-        targetDistanceSlider.maxValue = MaxSlider;
-        targetDistanceSlider.value = Random.Range(MinSlider, MaxSlider);
+        targetDistanceSlider.minValue = 50;
+        targetDistanceSlider.maxValue = 1000;
+        targetDistanceSlider.value = Random.Range(50, 1000);
     }
 }
