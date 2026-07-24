@@ -52,4 +52,12 @@ public class carBehavior : MonoBehaviour
         carClassType = (CarClass)state;
         InitStats(carClassType);
     }
+
+    public void Update()
+    {
+        if(health <= 0)
+        {
+            _gs.SetState(gameSettings.UIState.GameOver);
+        }
+    }
 }

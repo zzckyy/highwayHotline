@@ -1,12 +1,16 @@
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 public class gameSettings : MonoBehaviour
 {
 
     [Header("Attach To System")]
     public scoreDistanceSystem _scoreDistanceSystem;
     public economySystem _ekonomi;
+    public Transform _playerPos;
+    public AudioSource music;
 
     [HideInInspector]
     public bool isPlay;
@@ -73,15 +77,16 @@ public class gameSettings : MonoBehaviour
                 uiWin.SetActive(true);
                 Time.timeScale = 0f;
                 isPlay = false;
-                _ekonomi.Point = +Mathf.FloorToInt(_scoreDistanceSystem.distance);
+                _ekonomi.Point += Mathf.FloorToInt(_scoreDistanceSystem.distance);
                 break;
 
             case UIState.GameOver:
                 HideAll();
                 uiGameover.SetActive(true);
-                Time.timeScale = 0f;
+                Time.timeScale = 1f;
                 isPlay = false;
                 _ekonomi.Point -= Mathf.FloorToInt(_scoreDistanceSystem.distance * 2);
+                _playerPos.position -= Vector3.down * 3;
                 break;
 
             case UIState.MainMenu:
@@ -93,10 +98,20 @@ public class gameSettings : MonoBehaviour
         }
     }
 
+    public void Update()
+    {
+        if(isPlay){music.mute = false;} else{music.mute = true;}
+    }
 
 
     public void exitGame()
     {
         Application.Quit();
+    }
+
+    public void RestartScene()
+    {
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        SetState(UIState.MainMenu);
     }
 }
