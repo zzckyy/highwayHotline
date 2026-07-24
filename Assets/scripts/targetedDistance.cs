@@ -12,14 +12,15 @@ public class targetedDistance : MonoBehaviour
     public Slider targetDistanceSlider;
     public float targetDistance;
     public TMP_Text targetDistanceUI;
+    public TMP_Text TargetDistanceLabel;
 
     public gameSettings _gs;
     public economySystem _ekonomi;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-         _scoreDistanceSystem = GameObject.FindGameObjectWithTag("GameController").GetComponent<scoreDistanceSystem>();
-         winSound = GetComponent<AudioSource>();
+        _scoreDistanceSystem = GameObject.FindGameObjectWithTag("GameController").GetComponent<scoreDistanceSystem>();
+        winSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -28,16 +29,21 @@ public class targetedDistance : MonoBehaviour
         targetDistance = targetDistanceSlider.value;
 
         targetDistanceUI.text = Mathf.RoundToInt(targetDistance).ToString();
-        if(_scoreDistanceSystem.distance >= targetDistance)
+        TargetDistanceLabel.text = "Target: " + Mathf.RoundToInt(targetDistance).ToString();
+        if (_scoreDistanceSystem.distance >= targetDistance)
         {
             _gs.SetState(gameSettings.UIState.Win);
         }
 
-        // if(_gs.state = gameSettings.UIState.Win)
-        // {
-        //     Debug.Log("Menang");
-        //     PlayerPrefs.SetInt("Point", _ekonomi.Point);
-        //     PlayerPrefs.Save();
-        // }
+
+    }
+
+    public void SetRandomDistance(int MinSlider, int MaxSlider)
+    {
+        MinSlider = 50; MaxSlider = 1000;
+
+        targetDistanceSlider.minValue = MinSlider;
+        targetDistanceSlider.maxValue = MaxSlider;
+        targetDistanceSlider.value = Random.Range(MinSlider, MaxSlider);
     }
 }
