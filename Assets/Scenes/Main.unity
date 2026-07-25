@@ -4833,7 +4833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::scoreDistanceSystem
   distanceText: {fileID: 1196142582}
-  distanceMultiplier: 4
+  _player: {fileID: 2063178507}
   _targetedDistance: {fileID: 1788725319}
   _gs: {fileID: 1788725317}
   distance: 0

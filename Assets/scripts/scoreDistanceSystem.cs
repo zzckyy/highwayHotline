@@ -7,7 +7,7 @@ public class scoreDistanceSystem : MonoBehaviour
     public TMP_Text distanceText;
 
     [Header("Settings")]
-    public float distanceMultiplier = 1f;
+    public carBehavior _player;
     public targetedDistance _targetedDistance;
     public gameSettings _gs;
 
@@ -16,23 +16,23 @@ public class scoreDistanceSystem : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
     {
         if (!_gs.isPlay) return;
 
-        distance += Time.deltaTime * distanceMultiplier;
+        distance += Time.deltaTime * _player.speed;
 
         UpdateUI();
     }
 
     void UpdateUI()
     {
-        if(distanceText != null)
+        if (distanceText != null)
         {
-        distanceText.text = Mathf.RoundToInt(distance).ToString() + " M";
+            distanceText.text = Mathf.RoundToInt(distance).ToString() + " M";
         }
     }
 }
