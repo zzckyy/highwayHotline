@@ -23,7 +23,6 @@ public class scoreDistanceSystem : MonoBehaviour
     {
         if (!_gs.isPlay) return;
 
-        // distance naik terus (endless runner style)
         distance += Time.deltaTime * distanceMultiplier;
 
         UpdateUI();

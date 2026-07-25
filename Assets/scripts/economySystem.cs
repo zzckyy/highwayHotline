@@ -14,6 +14,5 @@ public class economySystem : MonoBehaviour
     {
         Point = PlayerPrefs.GetInt("Point", 0);
         pointDisplay.text = "Point: " + Point;
-        Debug.Log("point: " + Point);
     }
 }

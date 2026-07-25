@@ -12,7 +12,7 @@ public class carBehavior : MonoBehaviour
     void Start()
     {
         _playerCar = GetComponent<SpriteRenderer>();
-        SetClassCar(0);
+        SetClassCar(PlayerPrefs.GetInt("CarClass", 0));
     }
     public enum CarClass
     {
@@ -50,7 +50,11 @@ public class carBehavior : MonoBehaviour
 
     public void SetClassCar(int state)
     {
-        carClassType = (CarClass)state;
+        PlayerPrefs.SetInt("CarClass", state);
+
+        int carState;
+        carState = PlayerPrefs.GetInt("CarClass", 0);
+        carClassType = (CarClass)carState;
         InitStats(carClassType);
     }
 
