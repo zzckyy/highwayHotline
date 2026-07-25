@@ -8,6 +8,7 @@ public class gameSettings : MonoBehaviour
 
     [Header("Attach To System")]
     public scoreDistanceSystem _scoreDistanceSystem;
+    public targetedDistance _targetDistance;
     public economySystem _ekonomi;
     public Transform _playerPos;
     public AudioSource music;
@@ -16,6 +17,7 @@ public class gameSettings : MonoBehaviour
 
     [HideInInspector]
     public bool isPlay;
+    public bool isEndless;
 
     [Header("UI Game Object")]
     public GameObject uiGameplay;
@@ -23,6 +25,9 @@ public class gameSettings : MonoBehaviour
     public GameObject uiWin;
     public GameObject uiGameover;
     public GameObject uiMainMenu;
+    public GameObject uiTargetDistance;
+
+    public enum GameMode { Hotline, Endless }
 
 
     public enum UIState
@@ -54,6 +59,22 @@ public class gameSettings : MonoBehaviour
         uiWin.SetActive(false);
         uiGameover.SetActive(false);
         uiMainMenu.SetActive(false);
+    }
+
+    public void SetGameMode(GameMode modes)
+    {
+        switch (modes)
+        {
+            case GameMode.Hotline:
+                isEndless = false;
+                uiTargetDistance.SetActive(true);
+                break;
+
+            case GameMode.Endless:
+                isEndless = true;
+                uiTargetDistance.SetActive(false);
+                break;
+        }
     }
 
     public void SetState(UIState state)
@@ -106,7 +127,7 @@ public class gameSettings : MonoBehaviour
                 isPlay = false;
                 uiMainMenu.SetActive(true);
                 Time.timeScale = 1f;
-                
+
                 PlayerPrefs.GetInt("Point", 0);
                 break;
         }
@@ -127,5 +148,18 @@ public class gameSettings : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         SetState(UIState.MainMenu);
+    }
+
+    public void EndlessMode()
+    {
+        SetGameMode(GameMode.Endless);
+        SetStateInt(0);
+    }
+
+    public void HotlineMode()
+    {
+        SetGameMode(GameMode.Hotline);
+        SetStateInt(0);
+        _targetDistance.targetDistance = Random.Range(150, 1200);
     }
 }
