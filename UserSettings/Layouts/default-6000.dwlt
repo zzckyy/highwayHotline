@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 920
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -843,7 +843,7 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 07000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 07000000000000000000000012000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
@@ -889,7 +889,7 @@ MonoBehaviour:
   m_LastWindowPixelSize: {x: 1166, y: 525}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 01000000000000000000
+  m_LowResolutionForAspectRatios: 01000001000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
   m_showToolbar: 1
@@ -938,21 +938,13 @@ MonoBehaviour:
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -56716
-      - m_Data: -46692
-      - m_Data: -46660
-      - m_Data: -46628
-      - m_Data: -1376
-      - m_Data: 36026
-      - m_Data: 36090
-      - m_Data: 36098
-      - m_Data: 36114
-      - m_Data: 36144
-      - m_Data: 36218
-      - m_Data: 36226
-      - m_Data: 36338
-      - m_Data: 36406
+      - m_Data: -1374
+      - m_Data: 36038
+      - m_Data: 36230
+      - m_Data: 36238
       - m_Data: 36420
+      - m_Data: 36436
+      - m_Data: 36476
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1629,9 +1621,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 205.6174, y: 160.30876, z: -0.4717912}
+    m_Target: {x: 434.96545, y: 150.89407, z: 0.008025132}
     speed: 2
-    m_Value: {x: 205.6174, y: 160.30876, z: -0.4717912}
+    m_Value: {x: 434.96545, y: 150.89407, z: 0.008025132}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1681,9 +1673,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 50.082718
+    m_Target: 8.429466
     speed: 2
-    m_Value: 50.082718
+    m_Value: 8.429466
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1895,7 +1887,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/sprite/kenney_game-icons/PNG/White/2x
+    - Assets/sprite/road
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1905,21 +1897,21 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/sprite/kenney_game-icons/PNG/White/2x
+  - Assets/sprite/road
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /home/zzckyy/Project Game/highwayHotline
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 21}
+    scrollPos: {x: 0, y: 69}
     m_SelectedIDs:
-    - m_Data: 58162
+    - m_Data: 37080
     m_LastClickedID:
-      m_Data: 58162
+      m_Data: 37080
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 36896
+    - m_Data: 36850
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1952,7 +1944,7 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 36896
+    - m_Data: 36850
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1980,9 +1972,9 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: -56716
-    m_LastClickedInstanceID: -56716
-    m_HadKeyboardFocusLastEvent: 0
+    - m_Data: 53012
+    m_LastClickedInstanceID: 53012
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_Data: 52980
     - m_Data: -9588
@@ -2004,7 +1996,7 @@ MonoBehaviour:
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_TrimLeadingAndTrailingWhitespace: 0
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -2012,7 +2004,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 432}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -2140,7 +2132,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 308
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
