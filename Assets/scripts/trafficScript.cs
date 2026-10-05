@@ -4,10 +4,31 @@ public class trafficScript : MonoBehaviour
 {
     Transform _transform;
 
-    public float moveSpeed = 17.0f;
+    private float moveSpeed;
     public GameObject ledakan;
     private carBehavior player;
     private camShake cam;
+
+    public enum trafficCarType
+    {
+        lightCar, heavyCar
+    }
+
+    public trafficCarType carType;
+
+    public void InitStats(trafficCarType type)
+    {
+        switch (type)
+        {
+            case trafficCarType.lightCar:
+                moveSpeed = 12f;
+                break;
+
+            case trafficCarType.heavyCar:
+                moveSpeed = 8f;
+                break;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -15,12 +36,13 @@ public class trafficScript : MonoBehaviour
         _transform = GetComponent<Transform>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<carBehavior>();
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<camShake>();
+        InitStats(carType);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        _transform.Translate(Vector3.down * moveSpeed * Time.deltaTime);
+        _transform.Translate(Vector3.down * moveSpeed * Time.fixedDeltaTime);
         
     }
     void OnTriggerEnter2D(Collider2D other)
