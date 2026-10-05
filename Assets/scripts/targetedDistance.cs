@@ -9,12 +9,12 @@ public class targetedDistance : MonoBehaviour
     AudioSource winSound;
 
     [Header("Distance Target")]
-    public float targetDistance;
+    public float targetDistance; //diatur di gameSettings
     public TMP_Text targetDistanceUI;
 
     public gameSettings _gs;
     public economySystem _ekonomi;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         winSound = GetComponent<AudioSource>();

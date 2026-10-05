@@ -160,6 +160,6 @@ public class gameSettings : MonoBehaviour
     {
         SetGameMode(GameMode.Hotline);
         SetStateInt(0);
-        _targetDistance.targetDistance = Random.Range(150, 1200);
+        _targetDistance.targetDistance = Random.Range(150, 500);
     }
 }
