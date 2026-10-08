@@ -34,7 +34,7 @@ public class gameSettings : MonoBehaviour
 
     void Start()
     {
-        SetStateInt(4);
+        SetStateInt(3);
     }
 
     public void SetStateInt(int stateIndex)
