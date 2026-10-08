@@ -75,6 +75,9 @@ public class gameSettings : MonoBehaviour
                 Time.timeScale = 1f;
                 isPlay = false;
                 _playerPos.position -= Vector3.down * 3;
+
+                PlayerPrefs.SetFloat("highscore", _scoreDistanceSystem.highScoreDistances_Var);
+                PlayerPrefs.Save();
                 break;
 
             case UIState.MainMenu:
