@@ -3,7 +3,6 @@ using TMPro;
 
 public class mapUnlockSystem : MonoBehaviour
 {
-    public economySystem _ekonomi;
     public SpriteRenderer road;
     public Sprite[] Maps;
     public int[] mapCost;
@@ -45,9 +44,6 @@ public class mapUnlockSystem : MonoBehaviour
     public void setMap(int indexMap)
     {
         // HARGA MAP DAN INDEX MAP ITU PENEMPATAN INT NYA SAMA
-        if(_ekonomi.Point >= mapCost[indexMap])
-        {
-            isUnlocked[indexMap] = true;
-        }
+        
     }
 }

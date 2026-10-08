@@ -8,10 +8,7 @@ public class scoreDistanceSystem : MonoBehaviour
 
     [Header("Settings")]
     public carBehavior _player;
-    public targetedDistance _targetedDistance;
     public gameSettings _gs;
-
-    int score = 0;
     public float distance = 0f;
 
     void Start()
