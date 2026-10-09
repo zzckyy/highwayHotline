@@ -20,6 +20,7 @@ public class gameSettings : MonoBehaviour
     public GameObject uiPause;
     public GameObject uiGameover;
     public GameObject uiMainMenu;
+    public GameObject uiHelp;
 
 
     public enum UIState
@@ -27,7 +28,8 @@ public class gameSettings : MonoBehaviour
         Gameplay,
         Pause,
         GameOver,
-        MainMenu
+        MainMenu,
+        Help
     }
 
     public UIState state;
@@ -49,6 +51,7 @@ public class gameSettings : MonoBehaviour
         uiPause.SetActive(false);
         uiGameover.SetActive(false);
         uiMainMenu.SetActive(false);
+        uiHelp.SetActive(false);
     }
 
     public void SetState(UIState state)
@@ -85,6 +88,11 @@ public class gameSettings : MonoBehaviour
                 isPlay = false;
                 uiMainMenu.SetActive(true);
                 Time.timeScale = 1f;
+                break;
+
+            case UIState.Help:
+                HideAll();
+                uiHelp.SetActive(true);
                 break;
         }
     }
