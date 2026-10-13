@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e021b4c809a781e468c2988c016ebbea, type: 3}
   m_Name: ColorLookup
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.ColorLookup
-  active: 0
+  active: 1
   texture:
     m_OverrideState: 1
     m_Value: {fileID: 0}
@@ -296,8 +296,8 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 1
   contrast:
-    m_OverrideState: 0
-    m_Value: 7.8
+    m_OverrideState: 1
+    m_Value: 0
   colorFilter:
     m_OverrideState: 1
     m_Value: {r: 1, g: 1, b: 1, a: 1}
