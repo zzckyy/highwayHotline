@@ -3,6 +3,7 @@ using UnityEngine.Audio;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
+using CrazyGames;
 public class gameSettings : MonoBehaviour
 {
 
@@ -10,6 +11,11 @@ public class gameSettings : MonoBehaviour
     public scoreDistanceSystem _scoreDistanceSystem;
     public Transform _playerPos;
     public AudioSource music;
+
+    bool _gameOverHandled;
+    bool _crazySdkInitialized;
+    bool _hasPendingScore;
+    float _pendingScore;
 
 
     [HideInInspector]
@@ -36,7 +42,35 @@ public class gameSettings : MonoBehaviour
 
     void Start()
     {
+        if (Application.isEditor || Application.platform == RuntimePlatform.WebGLPlayer)
+        {
+            CrazySDK.Init(OnCrazySdkInitialized);
+        }
+
         SetStateInt(3);
+    }
+
+    void OnCrazySdkInitialized()
+    {
+        _crazySdkInitialized = true;
+        if (!_hasPendingScore) return;
+
+        CrazySDK.User.AddScore(_pendingScore);
+        _hasPendingScore = false;
+    }
+
+    void ReportScore(float score)
+    {
+        if (!Application.isEditor && Application.platform != RuntimePlatform.WebGLPlayer) return;
+
+        if (_crazySdkInitialized)
+        {
+            CrazySDK.User.AddScore(score);
+            return;
+        }
+
+        _pendingScore = score;
+        _hasPendingScore = true;
     }
 
     public void SetStateInt(int stateIndex)
@@ -60,6 +94,7 @@ public class gameSettings : MonoBehaviour
         {
             case UIState.Gameplay:
                 HideAll();
+                _gameOverHandled = false;
                 isPlay = true;
                 uiGameplay.SetActive(true);
                 Time.timeScale = 1f;
@@ -73,14 +108,20 @@ public class gameSettings : MonoBehaviour
                 break;
 
             case UIState.GameOver:
+                if (_gameOverHandled) break;
+                _gameOverHandled = true;
+
                 HideAll();
                 uiGameover.SetActive(true);
                 Time.timeScale = 1f;
                 isPlay = false;
-                _playerPos.position -= Vector3.down * 3;
+                _playerPos.position += Vector3.down * 3;
 
-                PlayerPrefs.SetFloat("highscore", _scoreDistanceSystem.highScoreDistances_Var);
+                float runScore = _scoreDistanceSystem.distance;
+                float previousBest = PlayerPrefs.GetFloat("highscore", 0f);
+                PlayerPrefs.SetFloat("highscore", Mathf.Max(previousBest, runScore));
                 PlayerPrefs.Save();
+                ReportScore(Mathf.RoundToInt(runScore));
                 break;
 
             case UIState.MainMenu:
