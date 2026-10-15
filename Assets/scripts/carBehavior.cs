@@ -30,19 +30,19 @@ public class carBehavior : MonoBehaviour
         {
             case CarClass.Ambulance:
                 health = 2;
-                speed = 4.5f;
+                speed = 9f;
                 _playerCar.sprite = CarSprite[0];
                 break;
 
             case CarClass.Police:
                 health = 1;
-                speed = 6f;
+                speed = 12f;
                 _playerCar.sprite = CarSprite[1];
                 break;
 
             case CarClass.Damkar:
                 health = 3;
-                speed = 3f;
+                speed = 6f;
                 _playerCar.sprite = CarSprite[2];
                 break;
         }
