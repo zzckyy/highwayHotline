@@ -32,7 +32,7 @@ public class camShake : MonoBehaviour
 
             transform.localPosition = originalPos + new Vector3(x, y, 0f);
 
-            elapsed += Time.deltaTime * 2f; // 🔥 ini bikin geter cepet (important!)
+            elapsed += Time.deltaTime * 2f;
             yield return null;
         }
 
