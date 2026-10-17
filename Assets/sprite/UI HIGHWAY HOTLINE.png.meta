@@ -129,31 +129,9 @@ TextureImporter:
       name: UI HIGHWAY HOTLINE_0
       rect:
         serializedVersion: 2
-        x: 90
-        y: 767
-        width: 400
-        height: 85
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: efa1afdea684cae4890110335dd18eee
-      internalID: 6026499086985220740
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI HIGHWAY HOTLINE_1
-      rect:
-        serializedVersion: 2
-        x: 567
-        y: 745
-        width: 102
+        x: 100
+        y: 860
+        width: 103
         height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -163,7 +141,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b70cacd7646ef124d91621e8cca21c17
+      spriteID: ffcccfda37edfeb4cac09a01f13b9ee5
+      internalID: 6026499086985220740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI HIGHWAY HOTLINE_1
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 860
+        width: 103
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd0bec051a351ba4bbee0722dbcd1850
       internalID: 857586353
       vertices: []
       indices: 
@@ -173,10 +173,10 @@ TextureImporter:
       name: UI HIGHWAY HOTLINE_2
       rect:
         serializedVersion: 2
-        x: 95
-        y: 568
-        width: 400
-        height: 112
+        x: 387
+        y: 860
+        width: 103
+        height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,7 +185,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 682b16622d0259344a035ecbd2715761
+      spriteID: a9baaf7987950eb448cf863e782b2cfc
       internalID: -1438809787
       vertices: []
       indices: 
@@ -193,6 +193,94 @@ TextureImporter:
       weights: []
     - serializedVersion: 2
       name: UI HIGHWAY HOTLINE_3
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 704
+        width: 368
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e65be9d8a754944f9e897e3eb072758
+      internalID: 1613094044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI HIGHWAY HOTLINE_4
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 727
+        width: 400
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 292b8f733d8ba6140a69b2ab3207e969
+      internalID: 1625062871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI HIGHWAY HOTLINE_5
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 568
+        width: 400
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb5de24276b5e394d88f6d0913b5d9b5
+      internalID: 515931440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI HIGHWAY HOTLINE_6
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 572
+        width: 368
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d97c70133f41ca549b989a15c0e727d9
+      internalID: 1730637943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI HIGHWAY HOTLINE_7
       rect:
         serializedVersion: 2
         x: 95
@@ -207,14 +295,36 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8468f99b6a4c46142b5b6b38c46c7748
-      internalID: 1613094044
+      spriteID: ee7437067154b0141aa453dd44fe5ee7
+      internalID: -1480795905
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI HIGHWAY HOTLINE_4
+      name: UI HIGHWAY HOTLINE_8
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 409
+        width: 368
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81dfdee7050b3dd43b8a36fb4702d06f
+      internalID: 1586846204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI HIGHWAY HOTLINE_9
       rect:
         serializedVersion: 2
         x: 95
@@ -229,8 +339,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc5e6b2d685c47e479459d164dfcd8d0
-      internalID: 1625062871
+      spriteID: c935c2f7284fc5545b9c80cb3ee41b04
+      internalID: 785838024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI HIGHWAY HOTLINE_10
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 99
+        width: 103
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d849eb3b279764646b0f7e6de467f695
+      internalID: 1234644145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI HIGHWAY HOTLINE_11
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 61
+        width: 247
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b741143e2decad4faf295d5c347ac56
+      internalID: -1128647527
       vertices: []
       indices: 
       edges: []
@@ -255,9 +409,16 @@ TextureImporter:
     nameFileIdTable:
       UI HIGHWAY HOTLINE_0: 6026499086985220740
       UI HIGHWAY HOTLINE_1: 857586353
+      UI HIGHWAY HOTLINE_10: 1234644145
+      UI HIGHWAY HOTLINE_11: -1128647527
       UI HIGHWAY HOTLINE_2: -1438809787
       UI HIGHWAY HOTLINE_3: 1613094044
       UI HIGHWAY HOTLINE_4: 1625062871
+      UI HIGHWAY HOTLINE_5: 515931440
+      UI HIGHWAY HOTLINE_6: 1730637943
+      UI HIGHWAY HOTLINE_7: -1480795905
+      UI HIGHWAY HOTLINE_8: 1586846204
+      UI HIGHWAY HOTLINE_9: 785838024
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

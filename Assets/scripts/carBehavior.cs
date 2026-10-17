@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class carBehavior : MonoBehaviour
 {
@@ -12,7 +13,10 @@ public class carBehavior : MonoBehaviour
     void Start()
     {
         _playerCar = GetComponent<SpriteRenderer>();
-        SetClassCar(PlayerPrefs.GetInt("CarClass", 0));
+        stateCarCarousell = Mathf.Clamp(PlayerPrefs.GetInt("CarClass", 0), 0, 2);
+        carClassType = (CarClass)stateCarCarousell;
+        InitStats(carClassType);
+        carImage.sprite = CarSprite[stateCarCarousell];
     }
     public enum CarClass
     {
@@ -22,7 +26,9 @@ public class carBehavior : MonoBehaviour
     public gameSettings _gs;
     public CarClass carClassType;
 
-    
+    private int stateCarCarousell;
+    public Image carImage;
+
 
     public void InitStats(CarClass type)
     {
@@ -48,21 +54,41 @@ public class carBehavior : MonoBehaviour
         }
     }
 
-    public void SetClassCar(int state)
-    {
-        PlayerPrefs.SetInt("CarClass", state);
-
-        int carState;
-        carState = PlayerPrefs.GetInt("CarClass", 0);
-        carClassType = (CarClass)carState;
-        InitStats(carClassType);
-    }
-
     public void Update()
     {
-        if(health <= 0)
+        if (health <= 0)
         {
             _gs.SetState(gameSettings.UIState.GameOver);
         }
+    }
+
+    public void SetCarCarousell(bool Forward)
+    {
+        if (Forward)
+        {
+            stateCarCarousell++;
+        }
+
+        else
+        {
+            stateCarCarousell--;
+        }
+
+        if(stateCarCarousell > 2)
+        {
+            stateCarCarousell = 0;
+        }
+
+        else if(stateCarCarousell < 0)
+        {
+            stateCarCarousell = 2;
+        }
+
+        carImage.sprite = CarSprite[stateCarCarousell];
+        PlayerPrefs.SetInt("CarClass", stateCarCarousell);
+
+        int carState;
+        carClassType = (CarClass)PlayerPrefs.GetInt("CarClass", 0);
+        InitStats(carClassType);
     }
 }
