@@ -141,7 +141,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffcccfda37edfeb4cac09a01f13b9ee5
+      spriteID: 3a67db302c8d0da48b1604eeeda5c92e
       internalID: 6026499086985220740
       vertices: []
       indices: 
@@ -163,7 +163,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd0bec051a351ba4bbee0722dbcd1850
+      spriteID: a7abd5ed49a33264c946fe202a6223f1
       internalID: 857586353
       vertices: []
       indices: 
@@ -185,7 +185,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9baaf7987950eb448cf863e782b2cfc
+      spriteID: 50b2a951d5c4e7d4fa43f39f12932a5f
       internalID: -1438809787
       vertices: []
       indices: 
@@ -207,7 +207,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e65be9d8a754944f9e897e3eb072758
+      spriteID: 3980d51c0d054b14f92024470f1a207b
       internalID: 1613094044
       vertices: []
       indices: 
@@ -229,7 +229,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 292b8f733d8ba6140a69b2ab3207e969
+      spriteID: b8f3de9d9cfdf0c4eb56a4c977fa12df
       internalID: 1625062871
       vertices: []
       indices: 
@@ -251,7 +251,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb5de24276b5e394d88f6d0913b5d9b5
+      spriteID: a130b58d44696bc489f8404e9089d8c8
       internalID: 515931440
       vertices: []
       indices: 
@@ -273,7 +273,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d97c70133f41ca549b989a15c0e727d9
+      spriteID: 6afd956e97d94b94db8123db4d025a54
       internalID: 1730637943
       vertices: []
       indices: 
@@ -295,7 +295,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee7437067154b0141aa453dd44fe5ee7
+      spriteID: 70a1a33637ca22842afabd78e958631e
       internalID: -1480795905
       vertices: []
       indices: 
@@ -317,7 +317,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81dfdee7050b3dd43b8a36fb4702d06f
+      spriteID: 579e3b5137c420c4d9545f06add3357f
       internalID: 1586846204
       vertices: []
       indices: 
@@ -339,7 +339,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c935c2f7284fc5545b9c80cb3ee41b04
+      spriteID: 29ed98a2179cb324aa0cad26d2efdb02
       internalID: 785838024
       vertices: []
       indices: 
@@ -347,6 +347,28 @@ TextureImporter:
       weights: []
     - serializedVersion: 2
       name: UI HIGHWAY HOTLINE_10
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 76
+        width: 277
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67173711ea1b0654daa815a315f83247
+      internalID: 1234644145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI HIGHWAY HOTLINE_11
       rect:
         serializedVersion: 2
         x: 95
@@ -361,14 +383,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d849eb3b279764646b0f7e6de467f695
-      internalID: 1234644145
+      spriteID: fb1a67cfdf56f16439d151e0a36b5cc5
+      internalID: -1128647527
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI HIGHWAY HOTLINE_11
+      name: UI HIGHWAY HOTLINE_12
       rect:
         serializedVersion: 2
         x: 243
@@ -383,8 +405,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b741143e2decad4faf295d5c347ac56
-      internalID: -1128647527
+      spriteID: 1db8a96b109e04346989e7c8c7f316f0
+      internalID: 524876750
       vertices: []
       indices: 
       edges: []
@@ -411,6 +433,7 @@ TextureImporter:
       UI HIGHWAY HOTLINE_1: 857586353
       UI HIGHWAY HOTLINE_10: 1234644145
       UI HIGHWAY HOTLINE_11: -1128647527
+      UI HIGHWAY HOTLINE_12: 524876750
       UI HIGHWAY HOTLINE_2: -1438809787
       UI HIGHWAY HOTLINE_3: 1613094044
       UI HIGHWAY HOTLINE_4: 1625062871
