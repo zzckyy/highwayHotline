@@ -12,7 +12,12 @@ public class CoinSystem : MonoBehaviour
     {
         Instance = this;
         Balance = PlayerPrefs.GetInt("CoinBalance", 0);
+    }
+
+    void Start()
+    {
         UpdateUI();
+
     }
 
     public void AddCoins(int amount)
