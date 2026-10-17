@@ -8,11 +8,19 @@ public class carBehavior : MonoBehaviour
     public int health;
     public float speed;
 
+    public int healthLevel;
+    public int speedLevel;
+
+    private const int MaxUpgradeLevel = 3;
+    private const int UpgradeCostStep = 500;
+
     SpriteRenderer _playerCar;
 
     void Start()
     {
         _playerCar = GetComponent<SpriteRenderer>();
+        healthLevel = PlayerPrefs.GetInt("HealthLevel", 0);
+        speedLevel = PlayerPrefs.GetInt("SpeedLevel", 0);
         stateCarCarousell = Mathf.Clamp(PlayerPrefs.GetInt("CarClass", 0), 0, 2);
         carClassType = (CarClass)stateCarCarousell;
         InitStats(carClassType);
@@ -35,20 +43,20 @@ public class carBehavior : MonoBehaviour
         switch (type)
         {
             case CarClass.Ambulance:
-                health = 2;
-                speed = 9f;
+                health = 2 + healthLevel;
+                speed = 9f + speedLevel;
                 _playerCar.sprite = CarSprite[0];
                 break;
 
             case CarClass.Police:
-                health = 1;
-                speed = 12f;
+                health = 1 + healthLevel;
+                speed = 12f + speedLevel;
                 _playerCar.sprite = CarSprite[1];
                 break;
 
             case CarClass.Damkar:
-                health = 3;
-                speed = 6f;
+                health = 3 + healthLevel;
+                speed = 6f + speedLevel;
                 _playerCar.sprite = CarSprite[2];
                 break;
         }
@@ -89,6 +97,32 @@ public class carBehavior : MonoBehaviour
 
         int carState;
         carClassType = (CarClass)PlayerPrefs.GetInt("CarClass", 0);
+        InitStats(carClassType);
+    }
+
+    public void UpgradeHealth()
+    {
+        if (healthLevel >= MaxUpgradeLevel) return;
+
+        int cost = (healthLevel + 1) * UpgradeCostStep;
+        if (CoinSystem.Instance == null || !CoinSystem.Instance.SpendCoins(cost)) return;
+
+        healthLevel++;
+        PlayerPrefs.SetInt("HealthLevel", healthLevel);
+        PlayerPrefs.Save();
+        InitStats(carClassType);
+    }
+
+    public void UpgradeSpeed()
+    {
+        if (speedLevel >= MaxUpgradeLevel) return;
+
+        int cost = (speedLevel + 1) * UpgradeCostStep;
+        if (CoinSystem.Instance == null || !CoinSystem.Instance.SpendCoins(cost)) return;
+
+        speedLevel++;
+        PlayerPrefs.SetInt("SpeedLevel", speedLevel);
+        PlayerPrefs.Save();
         InitStats(carClassType);
     }
 }
