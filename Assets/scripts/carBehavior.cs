@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using TMPro;
 
 public class carBehavior : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class carBehavior : MonoBehaviour
     private const int MaxUpgradeLevel = 3;
     private const int UpgradeCostStep = 500;
 
+    public TMP_Text[] costLabel;
+    int costHealth;
+    int costSpeed;
+
     SpriteRenderer _playerCar;
 
     void Start()
@@ -25,6 +30,7 @@ public class carBehavior : MonoBehaviour
         carClassType = (CarClass)stateCarCarousell;
         InitStats(carClassType);
         carImage.sprite = CarSprite[stateCarCarousell];
+        RefreshUpgradeCosts();
     }
     public enum CarClass
     {
@@ -68,6 +74,16 @@ public class carBehavior : MonoBehaviour
         {
             _gs.SetState(gameSettings.UIState.GameOver);
         }
+
+    }
+
+    private void RefreshUpgradeCosts()
+    {
+        costSpeed = speedLevel >= MaxUpgradeLevel ? 0 : (speedLevel + 1) * UpgradeCostStep;
+        costHealth = healthLevel >= MaxUpgradeLevel ? 0 : (healthLevel + 1) * UpgradeCostStep;
+
+        costLabel[0].text = speedLevel >= MaxUpgradeLevel ? "MAX" : costSpeed.ToString();
+        costLabel[1].text = healthLevel >= MaxUpgradeLevel ? "MAX" : costHealth.ToString();
     }
 
     public void SetCarCarousell(bool Forward)
@@ -104,25 +120,27 @@ public class carBehavior : MonoBehaviour
     {
         if (healthLevel >= MaxUpgradeLevel) return;
 
-        int cost = (healthLevel + 1) * UpgradeCostStep;
-        if (CoinSystem.Instance == null || !CoinSystem.Instance.SpendCoins(cost)) return;
+        costHealth = (healthLevel + 1) * UpgradeCostStep;
+        if (CoinSystem.Instance == null || !CoinSystem.Instance.SpendCoins(costHealth)) return;
 
         healthLevel++;
         PlayerPrefs.SetInt("HealthLevel", healthLevel);
         PlayerPrefs.Save();
         InitStats(carClassType);
+        RefreshUpgradeCosts();
     }
 
     public void UpgradeSpeed()
     {
         if (speedLevel >= MaxUpgradeLevel) return;
 
-        int cost = (speedLevel + 1) * UpgradeCostStep;
-        if (CoinSystem.Instance == null || !CoinSystem.Instance.SpendCoins(cost)) return;
+        costSpeed = (speedLevel + 1) * UpgradeCostStep;
+        if (CoinSystem.Instance == null || !CoinSystem.Instance.SpendCoins(costSpeed)) return;
 
         speedLevel++;
         PlayerPrefs.SetInt("SpeedLevel", speedLevel);
         PlayerPrefs.Save();
         InitStats(carClassType);
+        RefreshUpgradeCosts();
     }
 }

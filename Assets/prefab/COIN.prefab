@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 1234644145, guid: f385a812046561c4fadd18a39055774d, type: 3}
+  m_Sprite: {fileID: 478921707, guid: f385a812046561c4fadd18a39055774d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -169,6 +169,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d7688b56c654643aaccc4dd45b4a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinPickup
-  coinValue: 1
-  moveSpeed: 8
+  value: 1
+  speed: 8
   despawnY: -8
